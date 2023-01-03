@@ -3,11 +3,10 @@ import { useState } from "react";
 import { createContext } from "react";
 
 
-const todoContext = createContext();
+const TodoContext = createContext();
 
 export const TodoProvider = ({children}) => {
     const [formValue, setFormValue] = useState();
-
 
     const handeChange = (e) => {
         const {name, value} = e.target;
@@ -15,16 +14,17 @@ export const TodoProvider = ({children}) => {
     }
 
     return (
-        <todoContext.Provider
+        <TodoContext.Provider
             value={{
                 formValue,
-                handeChange,
+                handeChange
             }}
         >
             {children}   
-        </todoContext.Provider>
+        </TodoContext.Provider>
     )
 
 };
 
-export default todoContext;
+export default TodoContext;
+

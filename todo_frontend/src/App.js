@@ -1,13 +1,12 @@
 import React from "react";
 import AddTodo from "./component/addTodo";
+import  TodoProvider from "./context/todoContext";
 
 function App() {
   return (
-    <div>
-      
+      <TodoProvider >
         <AddTodo />
-      
-    </div>
+      </TodoProvider>
   );
 }
 

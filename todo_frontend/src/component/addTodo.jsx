@@ -1,11 +1,11 @@
 import React from "react";
+import  TodoContext  from "../context/todoContext";
 import { useContext } from "react";
-import todoContext from "../context/todoContext"; 
-
 
 
 const AddTodo = () => {
-    const { handeChange , formValue } = useContext(todoContext);
+    const { handeChange , formValue } =  useContext(TodoContext);
+    
 
     return (
         <div>
